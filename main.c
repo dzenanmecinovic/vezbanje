@@ -1,10 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    float godine;
-    printf("\nUnesite godine:");
-    scanf("%f", &godine);
-    printf("\nImate %.1f godina", godine);
-
+    char ime[30]; 
+    printf("\nUnesite ime:   ");
+    scanf("%s", &ime);
+    printf("\n\nPozdrav, %s.", ime);
     return 0;
     }
