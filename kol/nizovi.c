@@ -1,19 +1,26 @@
 #include <stdio.h>
 
-int sum(int numOne, int numTwo)
+// primer
+void f(int a[], int size)
 {
-    return numOne + numTwo;
+    printf("f: %d\n", size);
 }
 
 int main()
 {
-    int add = sum(5, 30);
-    printf("Suma je: %d", add);
-    // int a, b, c;
-    // float d;
-    // printf("input: ");
-    // scanf("%d%d%d%f", &a, &b, &c, &d);
-    // printf("Prvi %d, drugi %d, treci %d, cetvrti %f", a, b, c, d);
 
+    int d[] = {1, 2, 3};
+    printf("main %d\n", sizeof(d) / sizeof(d[0]));
+    f(d, sizeof(d) / sizeof(d[0]));
     return 0;
+
+    /*
+        Funkcija koja prima niz moze bit deklarisana na neki od sledecih nacina:
+
+        tip imeFunkcije(tip imeNiza[dimenzija])
+        tip imeFunkcije(tip imeNiza[])
+
+        Posto se u funkciju prenosi samo adresa pocetka niza, a ne i dimenzija niza,
+        prvi oblik deklaracije i nema puno smisla.
+    */
 }
