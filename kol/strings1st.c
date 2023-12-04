@@ -105,12 +105,12 @@ int main()
 
     // b)
 
-    int c, n = 0;
-    while ((c = getchar()) != EOF)
-    {
-        n++;
-    }
-    printf("Broj karaktera: %d.\n", n);
+    // int c, n = 0;
+    // while ((c = getchar()) != EOF)
+    // {
+    //     n++;
+    // }
+    // printf("Broj karaktera: %d.\n", n);
 
     return 0;
 }
