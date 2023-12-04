@@ -65,23 +65,52 @@ sastaviti program koji :
  b) cita sa tastature neogranicen broj karaktera sve dok se ne ucita greska i ispisuje unete karaktere na ekranu.
 */
 
-int main()
-{ // a)
+// int main()
+// { // a)
 
-    // char ch;
-    // printf("input: ");
-    // ch = getchar();
-    // printf("output: ");
-    // putchar(ch);
+// char ch;
+// printf("input: ");
+// ch = getchar();
+// printf("output: ");
+// putchar(ch);
+
+// b)
+
+// int c;
+// while (c != EOF)
+// {
+//     c = getchar();
+//     putchar(c);
+// }
+
+// return 0;
+// }
+
+/* sastaviti progrma za:
+a) unos teksta sa tastature sve dok se ne unese tacka i prikazuje broj karaktera do tacke.
+b) unos teksta sa tastature sve dok se ne ucite EOF i prikazuje ukupan broj karaktera.
+*/
+
+int main()
+{
+    // a)
+    // int c, counter = 0;
+    // c = getchar();
+    // while (c != '.')
+    // {
+    //     c = getchar();
+    //     counter++;
+    // }
+    // printf("Broj karaktera (ne racunajuci razmake) pre tacke %d\n", counter);
 
     // b)
 
-    // int c;
-    // while (c != EOF)
-    // {
-    //     c = getchar();
-    //     putchar(c);
-    // }
+    int c, n = 0;
+    while ((c = getchar()) != EOF)
+    {
+        n++;
+    }
+    printf("Broj karaktera: %d.\n", n);
 
     return 0;
 }
