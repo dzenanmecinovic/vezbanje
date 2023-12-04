@@ -10,7 +10,7 @@ int main()
     int c, prazni = 0, slova = 0, cifre = 0, ukupno = 0;
     while ((c = getchar()) != EOF)
     {
-        if ((c == ' ') || (c == '\0') || (c == '\n'))
+        if ((c == ' ') || (c == '\t') || (c == '\n'))
         {
             prazni++;
         }
