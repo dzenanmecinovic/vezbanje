@@ -206,3 +206,67 @@ Unos teksta se zavrsava signalom EOF.
 //     printf("Broj karaktera razlicitih od decimalnih cifara: %d", brojac);
 //     return 0;
 // }
+
+/*
+Sastaviti program koji ispituje da li su u unetom tekstu zagrade '(' i ')' dobo uparene.
+Unos teksta se zavrsava signalom EOF.
+*/
+
+// int main() -me
+// {
+//     int c, open = 0, closed = 0;
+
+//     while ((c = getchar()) != EOF)
+//     {
+//         switch (c)
+//         {
+//         case '(':
+//             open++;
+//             break;
+//         case ')':
+//             closed++;
+//             break;
+//         default:
+//             break;
+//         }
+//     }
+//     if ((open > closed))
+//     {
+//         printf("Broj zagrada nije jednak, vise je otvorenih zagrada.");
+//     }
+//     else if (closed > open)
+//     {
+//         printf("Broj zagrada nije jednak, vise je zatvorenih zagrada.");
+//     }
+//     else
+//         printf("Broj zagrada je jednak");
+
+//     return 0;
+// }
+
+// int main()
+// {
+//     int c;
+//     int otv = 0;
+//     while ((c = getchar()) != EOF)
+//     {
+//         switch (c)
+//         {
+//         case '(':
+//             otv++;
+//             break;
+//         case ')':
+//             otv--;
+//             if (otv < 0)
+//             {
+//                 printf("Visak zatvorenih zagrada\n");
+//                 break;
+//             }
+//         }
+//     }
+//     if (otv == 0)
+//         printf("Zagrade su u redu\n");
+//     else
+//         printf("Visak otvorenih zagrada\n");
+//     return 0;
+// }
