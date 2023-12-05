@@ -5,28 +5,162 @@ Sastaviti program koji broji prazne znakove(razmak, horizontalni tabulator(\0) i
 slova, decimalne cifre kao i sve znakove ulaznog teksta do oznake za kraj unosa EOF.
 */
 
+// int main()
+// {
+// int c, prazni = 0, slova = 0, cifre = 0, ukupno = 0;
+// while ((c = getchar()) != EOF)
+// {
+//     if ((c == ' ') || (c == '\t') || (c == '\n'))
+//     {
+//         prazni++;
+//     }
+//     if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+//     {
+//         slova++;
+//     }
+//     if ((c >= '0' && c <= '9'))
+//     {
+//         cifre++;
+//     }
+// }
+// ukupno = prazni + slova + cifre;
+// printf("Ukupno razmaka: %d\n", prazni);
+// printf("Ukupno slova: %d\n", slova);
+// printf("Ukupno cifara: %d\n", cifre);
+// printf("Ukupno karaktera: %d", ukupno);
+
+// return 0;
+// }
+/*
+Sastaviti program za odredjivanje broja samoglasnika i suglasnika u ulaznom tekstu.
+Unos teksta se zavrsava signalom EOF.
+*/
+
+// int main()
+// {
+//     int c, samoglasnici = 0, suglasnici = 0;
+
+//     while ((c = getchar()) != EOF)
+//     {
+//         if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+//         {
+//             if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
+//             {
+//                 samoglasnici++;
+//             }
+//             else
+//                 suglasnici++;
+//         }
+//     }
+//     printf("Broj samoglasnika: %d\n", samoglasnici);
+//     printf("Broj suglasnika: %d", suglasnici);
+//     return 0;
+// }
+
+/*
+Sastaviti program za odredjivanje broja velikih slova, malih slova i cifara u ulaznom tekstu.
+Unos teksta se zavrsava signalom EOF.
+*/
+
+// int main()
+// {
+
+//     int c, mala = 0, velika = 0, cifre = 0;
+
+//     while ((c = getchar()) != EOF)
+//     {
+//         if (c >= 'a' && c <= 'z')
+//             mala++;
+//         if (c >= 'A' && c <= 'Z')
+//             velika++;
+//         if (c >= '0' && c <= '9')
+//             cifre++;
+//     }
+//     printf("Broj malih slova: %d\nBroj velikih slova: %d\nBroj cifara: %d", mala, velika, cifre);
+//     return 0;
+// }
+
+/*
+Sastaviti program za odredjivanje broja pojavljivanja slova A u ulaznom tekstu
+i izraziti tu vrednost procentualno u odnosu na sve unete znake.
+Unos teksta se zavrsava signalom EOF.
+*/
+
+// int main()
+// {
+
+//     int c, slovoA, ostali;
+//     float result;
+
+//     while ((c = getchar()) != EOF)
+//     {
+//         if (c == 'A')
+//         {
+//             slovoA++;
+//         }
+//         else
+//         {
+//             ostali++;
+//         }
+//     }
+//     result = ostali / slovoA;
+//     printf("Odnos slova A i ostalih znakova: %.2f", result);
+//     return 0;
+// }
+
+// int main()
+// {
+//     int brojUnetihZnakova = 0;
+//     int brojSlovaA = 0;
+//     char karakter;
+
+//     while ((karakter = getchar()) != EOF)
+//     {
+//         brojUnetihZnakova++;
+
+//         if (karakter == 'A')
+//         {
+//             brojSlovaA++;
+//         }
+//     }
+
+//     if (brojUnetihZnakova > 0)
+//     {
+//         float procenatSlovaA = (float)brojSlovaA / brojUnetihZnakova * 100;
+//         printf("\nBroj slova 'A': %d\n", brojSlovaA);
+//         printf("Ukupan broj unetih znakova: %d\n", brojUnetihZnakova);
+//         printf("Procenat slova 'A' u odnosu na sve znakove: %.2f%%\n", procenatSlovaA);
+//     }
+//     else
+//     {
+//         printf("\nNiste uneli nijedan znak.\n");
+//     }
+
+//     return 0;
+// }
+
 int main()
 {
-    int c, prazni = 0, slova = 0, cifre = 0, ukupno = 0;
+    int c, razmak = 0, n = 0;
     while ((c = getchar()) != EOF)
     {
-        if ((c == ' ') || (c == '\t') || (c == '\n'))
+        switch (c)
         {
-            prazni++;
-        }
-        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-        {
-            slova++;
-        }
-        if ((c >= '0' && c <= '9'))
-        {
-            cifre++;
+        case ' ':
+            razmak++;
+            break;
+        case '.':
+        case ',':
+        case ':':
+        case ';':
+            n++;
+            break;
+
+        default:
+            break;
         }
     }
-    ukupno = prazni + slova + cifre;
-    printf("Ukupno razmaka: %d\n", prazni);
-    printf("Ukupno slova: %d\n", slova);
-    printf("Ukupno cifara: %d\n", cifre);
-    printf("Ukupno karaktera: %d", ukupno);
+    printf("Broj razmaka: %d\n", razmak);
+    printf("Broj ostalih znakova: %d", n);
     return 0;
 }
