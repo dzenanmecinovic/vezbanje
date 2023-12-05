@@ -139,28 +139,50 @@ Unos teksta se zavrsava signalom EOF.
 //     return 0;
 // }
 
+// counter za razmak i za ostale cifre (; : , .)
+
+// int main()
+// {
+//     int c, razmak = 0, n = 0;
+//     while ((c = getchar()) != EOF)
+//     {
+//         switch (c)
+//         {
+//         case ' ':
+//             razmak++;
+//             break;
+//         case '.':
+//         case ',':
+//         case ':':
+//         case ';':
+//             n++;
+//             break;
+
+//         default:
+//             break;
+//         }
+//     }
+//     printf("Broj razmaka: %d\n", razmak);
+//     printf("Broj ostalih znakova: %d", n);
+//     return 0;
+// }
+
+/*
+Sastaviti program koji broji karaktere ulaznog teksta do prve decimalne cifre.
+Unos teksta se zavrsava signalom EOF.
+*/
+#include <ctype.h>
 int main()
 {
-    int c, razmak = 0, n = 0;
+    int c, brojac = 0;
     while ((c = getchar()) != EOF)
     {
-        switch (c)
+        if (isdigit(c))
         {
-        case ' ':
-            razmak++;
-            break;
-        case '.':
-        case ',':
-        case ':':
-        case ';':
-            n++;
-            break;
-
-        default:
             break;
         }
+        brojac++;
     }
-    printf("Broj razmaka: %d\n", razmak);
-    printf("Broj ostalih znakova: %d", n);
+    printf("Broj znakova: %d", brojac);
     return 0;
 }
