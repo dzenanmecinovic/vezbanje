@@ -270,3 +270,153 @@ Unos teksta se zavrsava signalom EOF.
 //         printf("Visak otvorenih zagrada\n");
 //     return 0;
 // }
+
+/*
+Sastaviti funkciju za odredjivanje maksimuma dva cela broja, a zatim sastaviti program
+koji ce za uneta cetri cela broja odrediti najveci koristeci prethodnu funkciju,
+zatim ispisati rezultat.
+*/
+
+// int max(int a, int b)
+// {
+//     if (a > b)
+//         return a;
+//     else
+//         return b;
+// }
+
+// int main()
+// {
+//     int a, b, c, d;
+//     printf("a:");
+//     scanf("%d", &a);
+//     printf("b:");
+//     scanf("%d", &b);
+//     printf("c:");
+//     scanf("%d", &c);
+//     printf("d:");
+//     scanf("%d", &d);
+//     printf("Najveci broj je: %d", max(max(a, b), max(c, d)));
+//     return 0;
+// }
+#define PI 3.14
+// float povrsinaLopte(float a)
+// {
+//     return 4 * a * a * PI;
+// }
+
+// float zapreminaLopte(float a)
+// {
+//     return (4. / 3.) * (a * a * a) * PI;
+// }
+
+// int main()
+// {
+//     float r;
+//     printf("unesite poluprecnik:");
+//     scanf("%f", &r);
+//     if (r > 0)
+//     {
+//         printf("Povrsina lopte je: %.2f\n", povrsinaLopte(r));
+//         printf("Zapremina lopte je: %.2f", zapreminaLopte(r));
+//     }
+//     return 0;
+// }
+#include <math.h>
+// float stranice(float x1, float x2, float y1, float y2)
+// {
+//     return sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
+// }
+
+// float povrsinaTrougla(float obim, float a, float b, float c)
+// {
+//     return sqrt(obim * (obim - a) * (obim - b) * (obim - c));
+// }
+
+// int main()
+// {
+//     float x1, x2, y1, y2, x3, y3, a, b, c, S, P;
+//     printf("prvo teme (Ax,Ay):");
+//     scanf("%f%f", &x1, &y1);
+//     printf("drugo teme (Bx, By):");
+//     scanf("%f%f", &x2, &y2);
+//     printf("trece teme (Cx, Cy):");
+//     scanf("%f%f", &x3, &y3);
+
+//     a = stranice(x2, x3, y2, y3);
+//     b = stranice(x3, x1, y3, y1);
+//     c = stranice(x1, x2, y1, y2);
+
+//     S = (a + b + c) / 2;
+
+//     printf("Povrsina trougla je: %.2f", povrsinaTrougla(S, a, b, c));
+//     return 0;
+// }
+
+// int zbirKvadrata(int a, int b)
+// {
+//     int i, suma = 0;
+//     for (i = a; i <= b; i++)
+//     {
+//         suma += i * i;
+//     }
+//     return suma;
+// }
+
+// int zbirParni(int a, int b)
+// {
+//     int i, suma = 0;
+//     for (i = a; i <= b; i++)
+//         if (i % 2 == 0)
+//             suma += i * i;
+//     return suma;
+// }
+// int zbirNeparni(int a, int b)
+// {
+//     int i, suma = 0;
+//     for (i = a; i <= b; i++)
+//         if (i % 2 == 1)
+//             suma += i * i;
+//     return suma;
+// }
+
+// int main()
+// {
+//     int a, b;
+//     printf("a: ");
+//     scanf("%d", &a);
+//     printf("b: ");
+//     scanf("%d", &b);
+
+//     printf("Zbir kvadrata svih brojeva je: %d\nZbir kvadrata parnih brojeva je: %d\nZbir kvadrata neparnih brojeva je: %d", zbirKvadrata(a, b), zbirParni(a, b), zbirNeparni(a, b));
+
+//     return 0;
+// }
+
+// int sumaCifara(int a)
+// {
+//     int suma = 0;
+//     while (a != 0)
+//     {
+//         suma += a % 10;
+//         a = a / 10;
+//     }
+//     return suma;
+// }
+
+// int main()
+// {
+//     int i, a, b;
+
+//     printf("a:");
+//     scanf("%d", &a);
+//     printf("b:");
+//     scanf("%d", &b);
+
+//     for (i = a; i <= b; i++)
+//     {
+//         printf("%d\t%d\n", i, sumaCifara(i));
+//     }
+
+//     return 0;
+// }
