@@ -172,17 +172,37 @@ Sastaviti program koji broji karaktere ulaznog teksta do prve decimalne cifre.
 Unos teksta se zavrsava signalom EOF.
 */
 #include <ctype.h>
-int main()
-{
-    int c, brojac = 0;
-    while ((c = getchar()) != EOF)
-    {
-        if (isdigit(c))
-        {
-            break;
-        }
-        brojac++;
-    }
-    printf("Broj znakova: %d", brojac);
-    return 0;
-}
+// int main()
+// {
+//     int c, brojac = 0;
+//     while ((c = getchar()) != EOF)
+//     {
+//         if (isdigit(c))
+//         {
+//             break;
+//         }
+//         brojac++;
+//     }
+//     printf("Broj znakova: %d", brojac);
+//     return 0;
+// }
+
+/*
+Sastaviti program koji broji karaktere ulaznog teksta razlicite od decimalnih cifara.
+Unos teksta se zavrsava signalom EOF.
+*/
+
+// int main()
+// {
+//     int c, brojac = 0;
+//     while ((c = getchar()) != EOF)
+//     {
+//         if (isdigit(c))
+//         {
+//             continue;
+//         }
+//         brojac++;
+//     }
+//     printf("Broj karaktera razlicitih od decimalnih cifara: %d", brojac);
+//     return 0;
+// }
