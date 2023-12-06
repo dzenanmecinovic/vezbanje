@@ -420,3 +420,79 @@ zatim ispisati rezultat.
 
 //     return 0;
 // }
+
+// long Fakt(int n)
+// {
+//     long i, f = 1;
+//     for (i = 1; i <= n; i++)
+//         f *= i;
+//     return f;
+// }
+
+// int main()
+// {
+//     int n, k, c;
+//     printf("n: ");
+//     scanf("%d", &n);
+//     printf("k: ");
+//     scanf("%d", &k);
+//     c = Fakt(n) / (Fakt(k) * Fakt(n - k));
+//     printf("c= %d", c);
+//     return 0;
+// }
+
+/*
+    Program koji za dato n racuna i ispisuje sumu S=1! + 2! + 3! + ... + n!.
+    Za racunanje faktorijela koristiti odgovarajucu formulu.
+*/
+
+// long fakt(int n)
+// {
+//     long rezultat = 1;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         rezultat = rezultat * i;
+//     }
+//     return rezultat;
+// }
+
+// int main()
+// {
+//     int n, suma = 0;
+
+//     printf("n: ");
+//     scanf("%d", &n);
+
+//     for (int i = 1; i <= n; i++)
+//     {
+//         suma += fakt(i);
+//     }
+
+//     printf("Suma: %d", suma);
+//     return 0;
+// }
+
+// program kojim se ispisuju svi trocifreni brojevi(ako ih ima), koji su jednaki sumi faktorijela svojih cifara.
+
+// long fakt(int n)
+// {
+//     long f = 0;
+//     for (long i = 1; i <= n; ++i)
+//     {
+//         f = f * i;
+//     }
+//     return f;
+// }
+
+// int main()
+// {
+//     int a, b, c;
+//     for (a = 1; a <= 9; a++)
+//         for (b = 0; b <= 9; b++)
+//             for (c = 0; c <= 9; c++)
+//             {
+//                 if ((a * 100 + b * 10 + c) == (fakt(a) + fakt(b) + fakt(c)))
+//                     printf("\n %d", a * 100 + b * 10 + c);
+//             }
+//     return 0;
+// }
