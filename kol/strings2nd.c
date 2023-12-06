@@ -476,10 +476,10 @@ zatim ispisati rezultat.
 
 // long fakt(int n)
 // {
-//     long f = 0;
-//     for (long i = 1; i <= n; ++i)
+//     long f = 1;
+//     for (long i = 1; i <= n; i++)
 //     {
-//         f = f * i;
+//         f *= i;
 //     }
 //     return f;
 // }
@@ -492,7 +492,7 @@ zatim ispisati rezultat.
 //             for (c = 0; c <= 9; c++)
 //             {
 //                 if ((a * 100 + b * 10 + c) == (fakt(a) + fakt(b) + fakt(c)))
-//                     printf("\n %d", a * 100 + b * 10 + c);
+//                     printf("%d\n", a * 100 + b * 10 + c);
 //             }
 //     return 0;
 // }
