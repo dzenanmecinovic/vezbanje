@@ -496,3 +496,12 @@ zatim ispisati rezultat.
 //             }
 //     return 0;
 // }
+
+/*
+Sastaviti funkciju za stepenovanje brojeva. Zatim sastaviti program koji pomocu formirane funkcije
+vrsi racunanje za dati broj i stepen i ispisuje rezultat.
+*/
+
+long stepen(double osnova, int n)
+{
+}
