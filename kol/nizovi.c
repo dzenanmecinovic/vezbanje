@@ -1,5 +1,5 @@
 #include <stdio.h>
-// #define MAX 10
+#define MAX 10
 
 // primer
 // void f(int a[], int size)
@@ -170,6 +170,110 @@ int main()
         Posto se u funkciju prenosi samo adresa pocetka niza, a ne i dimenzija niza,
         prvi oblik deklaracije i nema puno smisla.
     */
+
+    // int someNums[] = {5, 25, 100, 500};
+    // char karakteri[] = {'A', 'B', 'C', 'D'};
+
+    // for (int i = 0; i < 4; i++)
+    // {
+    //     printf("Broj %d: %d\n", i + 1, someNums[i]);
+    // }
+
+    // for (int i = 0; i < 4; i++)
+    // {
+    //     printf("Karakter %d: %c\n", i + 1, karakteri[i]);
+    // }
+
+    // printf("broj 1 - %d \n", someNums[0]);
+    // printf("broj 2 - %d \n", someNums[1]);
+    // printf("broj 3 - %d \n", someNums[3]);
+
+    // karakteri[0] = 'K';
+    // printf("Slovo %c \n", karakteri[0]);
+
+    // aritmeticka sredina niza brojeva deljivih sa 3
+
+    // int i, n, k = 0, niz[MAX];
+    // double suma = 0;
+    // printf("broj elemenata:");
+    // scanf("%d", &n);
+    // printf("Elementi niza:");
+    // for (i = 0; i < n; i++)
+    // {
+    //     scanf("%d", &niz[i]);
+    //     if (niz[i] % 3 == 0)
+    //     {
+    //         suma += niz[i];
+    //         k++;
+    //     }
+    // }
+    // printf("aritmeticka sredina: %.2f\n", suma / k);
+
+    // suma parnih i suma neparnih a)
+    // suma parnih indeksa i neparnih indeksa b)
+
+    // int i, n, niz[MAX], sumap = 0, suman = 0;
+    // a)
+    // printf("broj elemenata:");
+    // scanf("%d", &n);
+    // printf("elementi niza: ");
+    // for (i = 0; i < n; i++)
+    // {
+    //     scanf("%d", &niz[i]);
+    //     if (niz[i] % 2 == 0)
+    //     {
+    //         sumap += niz[i];
+    //     }
+    //     else
+    //     {
+    //         suman += niz[i];
+    //     }
+    // }
+    // printf("suma parnih: %d\nsuma neparnih: %d", sumap, suman);
+
+    // b)
+    // printf("broj elemenata:");
+    // scanf("%d", &n);
+    // printf("elementi niza:");
+    // for (i = 0; i < n; i++)
+    // {
+    //     scanf("%d", &niz[i]);
+    //     if (i % 2 == 0)
+    //     {
+    //         sumap += niz[i];
+    //     }
+    //     else
+    //     {
+    //         suman += niz[i];
+    //     }
+    // }
+    // printf("suma parnih indeksa: %d\nsuma neparnih indeksa: %d", sumap, suman);
+
+    /*
+    10.10. Саставити програм који прочита два низа, дужине n, са реалним компонентама,
+A A1 A2 A3 = ( 1 2 , ,..., n ) и B B1 B2 B3 = ( 1 2 , ,..., n ) израчунава њихов скаларни производ= ∑ и
+исписује добијени резултат.
+*/
+
+    // int i, n;
+    // double proizvod = 0, niz1[MAX], niz2[MAX];
+    // printf("Broj elemenata: ");
+    // scanf("%d", &n);
+    // printf("Elementi niza A: ");
+    // for (i = 0; i < n; i++)
+    // {
+    //     scanf("%lf", &niz1[i]);
+    // }
+    // printf("Elementi niza B: ");
+    // for (i = 0; i < n; i++)
+    // {
+    //     scanf("%lf", &niz2[i]);
+    // }
+    // for (i = 0; i < n; i++)
+    // {
+    //     proizvod += niz1[i] * niz2[i];
+    // }
+    // printf(" Skalarni proizvod je = %.3f\n", proizvod);
 
     return 0;
 }
