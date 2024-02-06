@@ -337,25 +337,89 @@ A A1 A2 A3 = ( 1 2 , ,..., n ) и B B1 B2 B3 = ( 1 2 , ,..., n ) израчун�
     // formirati niz C od dva zadata niza realnih brojeva A i B (svaki duzine 5) na sledeci nacin:
     //  Ci = (Ai)3 / 3 + 2 * Ai * Bi
 
-#define MAXIMUM 5
+    // #define MAXIMUM 5
 
-    float nizA[MAXIMUM], nizB[MAXIMUM], nizC[MAXIMUM];
-    int i;
+    //     float nizA[MAXIMUM], nizB[MAXIMUM], nizC[MAXIMUM];
+    //     int i;
+    //     printf("Elementi niza A: ");
+    //     for (i = 0; i < MAXIMUM; i++)
+    //     {
+    //         scanf("%f", &nizA[i]);
+    //     }
+    //     printf("Elementi niza B: ");
+    //     for (i = 0; i < MAXIMUM; i++)
+    //     {
+    //         scanf("%f", &nizB[i]);
+    //     }
+
+    //     for (i = 0; i < MAXIMUM; i++)
+    //     {
+    //         nizC[i] = pow(nizA[i], 3) / 3 + 2 * nizA[i] * nizB[i];
+    //         printf("%.2f ", nizC[i]);
+    //     }
+
+    // sastavi program za formiranje niza C od dva niza celih brojeva A i B  (svaki duzine t) na sledeci nacin:
+    // A[0] + B[4],...,A[4] + B[0]. Ispisati niz C.
+
+    // #define MAXIMUM 5
+    //     int i, nizA[MAXIMUM], nizB[MAXIMUM], nizC[MAXIMUM];
+    //     printf("Elementi niza A: ");
+    //     for (i = 0; i < MAXIMUM; i++)
+    //     {
+    //         scanf("%d", &nizA[i]);
+    //     }
+    //     printf("Elementi niza B: ");
+    //     for (i = 0; i < MAXIMUM; i++)
+    //     {
+    //         scanf("%d", &nizB[i]);
+    //     }
+    //     printf("Elementi niza C: ");
+    //     for (i = 0; i < MAXIMUM; i++)
+    //     {
+    //         nizC[i] = nizA[i] + nizB[MAXIMUM - 1 - i];
+    //         printf("%d ", nizC[i]);
+    //     }
+
+    // sastavi pgoram koji ucita elemente niza A (a1,a2,...an) duzine n
+    // i niza B (b1,b2,...bn) duzine m, zatim formira niz C koji se sastoji
+    // od parnih elemenata niza A i niza B.
+
+    int i, n, m, nizA[MAX], nizB[MAX], nizC[MAX], counter = 0;
+    printf("Broj elemenata niza A: ");
+    scanf("%d", &n);
     printf("Elementi niza A: ");
-    for (i = 0; i < MAXIMUM; i++)
+    for (i = 0; i < n; i++)
     {
-        scanf("%f", &nizA[i]);
+        scanf("%d", &nizA[i]);
     }
+    printf("Broj elemenata niza B: ");
+    scanf("%d", &m);
     printf("Elementi niza B: ");
-    for (i = 0; i < MAXIMUM; i++)
+    for (i = 0; i < m; i++)
     {
-        scanf("%f", &nizB[i]);
+        scanf("%d", &nizB[i]);
+    }
+    printf("\nElementi niza C: ");
+    for (i = 0; i < n; i++)
+    {
+        if (nizA[i] % 2 == 0)
+        {
+            nizC[counter] = nizA[i];
+            counter++;
+        }
+    }
+    for (i = 0; i < m; i++)
+    {
+        if (nizB[i] % 2 == 0)
+        {
+            nizC[counter] = nizB[i];
+            counter++;
+        }
     }
 
-    for (i = 0; i < MAXIMUM; i++)
+    for (i = 0; i < counter; i++)
     {
-        nizC[i] = pow(nizA[i], 3) / 3 + 2 * nizA[i] * nizB[i];
-        printf("%.2f ", nizC[i]);
+        printf("%d ", nizC[i]);
     }
 
     return 0;
