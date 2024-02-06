@@ -1,5 +1,6 @@
 #include <stdio.h>
-#define MAX 10
+#include <math.h>
+#define MAX 100
 
 // primer
 // void f(int a[], int size)
@@ -274,6 +275,88 @@ A A1 A2 A3 = ( 1 2 , ,..., n ) и B B1 B2 B3 = ( 1 2 , ,..., n ) израчун�
     //     proizvod += niz1[i] * niz2[i];
     // }
     // printf(" Skalarni proizvod je = %.3f\n", proizvod);
+
+    // sastavi program koji ucitava elemente niza A (a1,a2,a3...) duzine n i niza B (b1,b2,b3...) duzine m i spaja
+    // u jedan niz C (a1,a2...b1,b2...) duzine n+m
+
+    // int i, n, m, nizA[MAX], nizB[MAX], nizC[MAX];
+    // printf("Broj elemenata niza A: ");
+    // scanf("%d", &n);
+    // printf("Elementi niza A: ");
+    // for (i = 0; i < n; i++)
+    // {
+    //     scanf("%d", &nizA[i]);
+    // }
+    // printf("Broj elemenata niza B: ");
+    // scanf("%d", &m);
+    // printf("Elementi niza B: ");
+    // for (i = 0; i < m; i++)
+    // {
+    //     scanf("%d", &nizB[i]);
+    // }
+    // printf("Elementi niza C: ");
+    // for (i = 0; i < (m + n); i++)
+    // {
+    //     if (i < n)
+    //     {
+    //         nizC[i] = nizA[i];
+    //     }
+    //     else
+    //     {
+    //         nizC[i] = nizB[i - n];
+    //     }
+    //     printf("%d ", nizC[i]);
+    // }
+
+    // program ucitava elemente dva niza duzine n A (a1,a2,a3...) i B (b1,b2,b3...) i formira i ispisuje
+    // novi niz ciji su elementi C (a1+b1, a2+b2, a3+b3...)
+
+    // int i, n, nizA[MAX], nizB[MAX], nizC[MAX];
+    // printf("Broj elemenata nizova: ");
+    // scanf("%d", &n);
+    // printf("Elementi niza A: ");
+    // for (i = 0; i < n; i++)
+    // {
+    //     scanf("%d", &nizA[i]);
+    // }
+    // printf("Elementi niza B: ");
+    // for (i = 0; i < n; i++)
+    // {
+    //     scanf("%d", &nizB[i]);
+    // }
+    // for (i = 0; i < n; i++)
+    // {
+    //     nizC[i] = nizA[i] + nizB[i];
+    // }
+    // printf("Elementi niza C: ");
+    // for (i = 0; i < n; i++)
+    // {
+    //     printf(" %d", nizC[i]);
+    // }
+
+    // formirati niz C od dva zadata niza realnih brojeva A i B (svaki duzine 5) na sledeci nacin:
+    //  Ci = (Ai)3 / 3 + 2 * Ai * Bi
+
+#define MAXIMUM 5
+
+    float nizA[MAXIMUM], nizB[MAXIMUM], nizC[MAXIMUM];
+    int i;
+    printf("Elementi niza A: ");
+    for (i = 0; i < MAXIMUM; i++)
+    {
+        scanf("%f", &nizA[i]);
+    }
+    printf("Elementi niza B: ");
+    for (i = 0; i < MAXIMUM; i++)
+    {
+        scanf("%f", &nizB[i]);
+    }
+
+    for (i = 0; i < MAXIMUM; i++)
+    {
+        nizC[i] = pow(nizA[i], 3) / 3 + 2 * nizA[i] * nizB[i];
+        printf("%.2f ", nizC[i]);
+    }
 
     return 0;
 }
