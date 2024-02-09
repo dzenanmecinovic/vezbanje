@@ -1,50 +1,37 @@
+
+
 #include <stdio.h>
-
-int imaMagicnuCifru(int broj)
-{
-    int cifra;
-    int pozicija = 1;
-
-    while (broj > 0)
-    {
-        cifra = broj % 10;
-
-        if (cifra != pozicija)
-        {
-            return 0; // Nije magična cifra
-        }
-
-        broj /= 10;
-        pozicija++;
-    }
-
-    return 1; // Sve cifre su magične
-}
 
 int main()
 {
-    int unos;
+    int redniBrojStudenta, brojTacnihOdgovora = 0;
 
-    printf("Unesite cele brojeve. Unesite 0 da biste zavrsili:\n");
+    // Unos rednog broja studenta
+    printf("Unesite redni broj studenta (1-9): ");
+    scanf("%d", &redniBrojStudenta);
 
-    do
+    // Unos odgovora za svako pitanje
+    if (redniBrojStudenta > 0 && redniBrojStudenta < 10)
     {
-        printf("Unesite broj: ");
-        scanf("%d", &unos);
-
-        if (unos != 0)
+        for (int i = 0; i < 7; i++)
         {
-            if (imaMagicnuCifru(unos))
+            int odgovor;
+            printf("Unesite odgovor za pitanje %d: ", i + 1);
+            scanf("%d", &odgovor);
+
+            // Provera da li je student sa zadatim rednim brojem tacno odgovorio na pitanje
+            if (odgovor % 10 == redniBrojStudenta || (odgovor / 10) % 10 == redniBrojStudenta || (odgovor / 100) % 10 == redniBrojStudenta)
             {
-                printf("Broj %d ima magicne cifre.\n", unos);
-            }
-            else
-            {
-                printf("Broj %d nema magicne cifre. Kraj programa.\n", unos);
-                break;
+                brojTacnihOdgovora++;
             }
         }
-    } while (unos != 0);
+        // Ispis rezultata
+        printf("\nUkupan broj tacnih odgovora studenta %d: %d\n", redniBrojStudenta, brojTacnihOdgovora);
+    }
+    else
+    {
+        printf("Broj mora biti izmedju 1 i 9!");
+    }
 
     return 0;
 }
